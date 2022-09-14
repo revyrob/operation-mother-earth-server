@@ -1,0 +1,250 @@
+{
+    "en": {
+        "questions": {
+            "levels": {
+                "1": [
+                    {
+                        "question": "What is e-waste",
+                        "answers": [
+                            "electronic waste",
+                            "email waste",
+                            "element waste",
+                            "energy waste"
+                        ],
+                        "points": 10,
+                        "correct": "electronic waste"
+                    },
+                    {
+                        "question": "On average how much does it cost to recycle your phone",
+                        "answers": [
+                            "100 Euros",
+                            "10 Euros",
+                            "free",
+                            "50 Euros"
+                        ],
+                        "points": 10,
+                        "correct": "free"
+                    },
+                    {
+                        "question": "How long do people keep their phones in Canada",
+                        "answers": [
+                            "1 year",
+                            "2 years",
+                            "3 years",
+                            "5 years"
+                        ],
+                        "points": 10,
+                        "correct": "2 years",
+                        "fact": [
+                            "If you have made it this far your knowledge is powerful.  Continue on your journey.",
+                            "Small Changes = Big Impact!"
+                        ]
+                    }
+                ],
+                "2": [
+                    {
+                        "question": "How much e-waste was produced around the world in 2019?",
+                        "answers": [
+                            "53.6 million tonnes",
+                            "20.5 million tonnes",
+                            "10 million tonnes",
+                            "75.6 million tonnes"
+                        ],
+                        "correct": "53.6 million tonnes",
+                        "points": 10,
+                        "fact": [
+                            "53.6 million tonnes of e-waste is ",
+                            "5 300 Eiffel Towers!",
+                            "By 2030, the amount of e-waste will reach 74 million tons. That's about",
+                            "7 325 Eiffel Towers."
+                        ]
+                    },
+                    {
+                        "question": "Can e-waste leaking into the groundwater harm humans and animals?",
+                        "answers": [
+                            "yes",
+                            "no"
+                        ],
+                        "correct": "yes",
+                        "points": 10
+                    },
+                    {
+                        "question": "Why recycle your phone?",
+                        "answers": [
+                            "it is fun",
+                            "it costs a lot of money",
+                            "to help the environment",
+                            "so you can get a new one"
+                        ],
+                        "correct": "to help the environment",
+                        "points": 10,
+                        "fact": [
+                            "Congratulations you are past the halfway point.  The robots have been updated with your knowledge.  You are on the last part of the journey.  Beware these questions can be tricky."
+                        ]
+                    }
+                ],
+                "3": [
+                    {
+                        "question": "What is not a type of e-waste?",
+                        "answers": [
+                            "book",
+                            "monitor screens",
+                            "vacuums",
+                            "cameras"
+                        ],
+                        "points": 30,
+                        "correct": "book"
+                    },
+                    {
+                        "question": "Are there valuables in e-waste?",
+                        "answers": [
+                            "Yes",
+                            "No"
+                        ],
+                        "correct": "Yes",
+                        "points": 30,
+                        "fact": [
+                            "Important metals like ",
+                            "iron, copper, and gold",
+                            "reside in our devices. These are valuable assets.  These metals can be recovered through proper recycling processes."
+                        ]
+                    },
+                    {
+                        "question": "What percentage of countries have e-waste policies, legislation or regulation?",
+                        "answers": [
+                            "14%",
+                            "35%",
+                            "91%",
+                            "71%"
+                        ],
+                        "correct": "71%",
+                        "points": 30
+                    }
+                ]
+            }
+        }
+    },
+    "fr": {
+        "questions": {
+            "levels": {
+                "2": [
+                    {
+                        "question": "Qui génère le plus de déchets électroniques par habitants?",
+                        "answers": [
+                            "Amérique du Nord",
+                            "Amérique du Sud",
+                            "Europe",
+                            "Asie"
+                        ],
+                        "points": 10,
+                        "correct": "Europe"
+                    },
+                    {
+                        "question": "En moyenne quel est le coût de recyclage d'un téléphone?",
+                        "answers": [
+                            "100€",
+                            "10€",
+                            "Gratuit",
+                            "50€"
+                        ],
+                        "points": 10,
+                        "correct": "Gratuit"
+                    },
+                    {
+                        "question": "Combien de temps les gens gardent-ils leur téléphone en France?",
+                        "answers": [
+                            "1 an",
+                            "2 ans",
+                            "3 ans",
+                            "5 ans"
+                        ],
+                        "points": 10,
+                        "correct": "2 ans",
+                        "fact": [
+                            "Si vous êtes arrivés si loin, vôtre connaissance est élevée. Continuez dans le jeu."
+                        ]
+                    }
+                ],
+                "3": [
+                    {
+                        "question": "Quel volume de déchets électroniques a été produit dans le monde en 2019?",
+                        "answers": [
+                            "53,6 million tonnes",
+                            "20,5 million tonnes",
+                            "10 million tonnes",
+                            "75,6 million tonnes"
+                        ],
+                        "points": 10,
+                        "correct": "53,6 million tonnes",
+                        "fact": [
+                            "That is the weight of",
+                            "5 300 Eiffel Towers!",
+                            "53,6 millions de tonnes de déchets électroniques c'est le poids de 5300 tours eiffel!"
+                        ]
+                    },
+                    {
+                        "question": "Quel élément électronique contamine l'environnement?",
+                        "answers": [
+                            "eau",
+                            "élément toxique",
+                            "huile",
+                            "rien"
+                        ],
+                        "points": 10,
+                        "correct": "élément toxique"
+                    },
+                    {
+                        "question": "Pourquoi recycler votre téléphone?",
+                        "answers": [
+                            "c'est drôle",
+                            "parce que ca coûte beaucoup d’argent",
+                            "pour qu'il ne pollue pas l'environnement",
+                            "pour en avoir un nouveau"
+                        ],
+                        "points": 10,
+                        "correct": "pour qu'il ne pollue pas l'environnement",
+                        "fact": [
+                            "Félicitations, vous êtes à la moitié du jeu. Les robots ont été mis à jour grâce à vos connaissances. Vous êtes sur la dernière partie de l’aventure. Attention les questions peuvent être piégeuses."
+                        ]
+                    }
+                ],
+                "4": [
+                    {
+                        "question": "Quel type d’appareil fait partie des déchets électroniques?",
+                        "answers": [
+                            "téléphone portable",
+                            "écran d’ordinateur",
+                            "aspirateur",
+                            "appareil photo"
+                        ],
+                        "points": 30,
+                        "correct": "téléphone portable, écran d’ordinateur, aspirateur, appareil photo"
+                    },
+                    {
+                        "question": "Y a t'il de la valeur dans les déchets électroniques?",
+                        "answers": [
+                            "Oui",
+                            "Non"
+                        ],
+                        "points": 30,
+                        "correct": "Oui",
+                        "fact": [
+                            "Les métaux principaux comme l'acier, le cuivre et l'or sont présents dans nos appareils. Ce sont des éléments précieux. Ces métaux peuvent être récupérés à travers une chaîne de recyclage adapté."
+                        ]
+                    },
+                    {
+                        "points": 30,
+                        "question": "Quel pourcentage de pays ont des politiques, législations ou réglementations de recyclage des déchets électroniques?",
+                        "answers": [
+                            "14%",
+                            "35%",
+                            "91%",
+                            "71%"
+                        ],
+                        "correct": "71%"
+                    }
+                ]
+            }
+        }
+    }
+}
