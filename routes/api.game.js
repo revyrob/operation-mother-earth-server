@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
       //loop throug the data just taking the
     } else {
       const questions = JSON.parse(data);
-      res.json(videos);
+      res.json(questions);
     }
   });
 });

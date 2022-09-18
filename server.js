@@ -11,7 +11,7 @@ const recyclingCenterRoute = require("./routes/api.recycling");
 app.use(cors());
 app.use(express.json());
 app.use("/recycling", recyclingCenterRoute);
-// app.use("/game", gameRoute);
+app.use("/game", gameRoute);
 // app.use("/education", educationRoute);
 // app.use("/buySell", buySellRoute);
 
