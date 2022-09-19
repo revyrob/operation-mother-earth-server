@@ -1,0 +1,25 @@
+[
+    {
+        "image":"images/mother-nature-dies.png",
+        "text":"Mother Earth needs your help. Poison is leaking into her watery groundwater veins from electronics and the weight of the landfills are putting pressure on her.", 
+        "alt": "Mother earth dying"
+    },
+    {
+        "image":"images/robot.png",
+        "text":"The robots who live on Mother Earth need to be educated and new information needs to be uploaded to their electronic brains so they can change their ways and we can save Mother Earth.",
+        "alt": "Robots"
+        
+    },
+    {
+        "image":"images/update.png",
+        "text":"We need to update the electronic brains so they have the knowledge to make the right decisions.",
+        "alt": "mother earth with robots"
+        
+    },
+    {
+        "image":"images/boy-know.png",
+        "text":"As you answer the questions your response will be uploaded to the robots. Please reflect upon your answers because if wrong you could lead to the death of Mother Earth.",
+        "alt": "boy with light bulb"
+        
+    }
+]
