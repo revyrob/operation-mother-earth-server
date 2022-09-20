@@ -10,6 +10,9 @@ const gameStoryRoute = require("./routes/api.gameStory");
 // const educationRoute = require("./route/api.education");
 // const buySellRoute = require("./route/api.buySell");
 
+//to use the static files in my public folder
+app.use(express.static("public"));
+
 app.use(cors());
 app.use(express.json());
 app.use("/recycling", recyclingCenterRoute);

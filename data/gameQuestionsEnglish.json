@@ -66,9 +66,7 @@
         "question": "Are there valuables in e-waste?",
         "answerOptions": [
             {"answer": "yes", "isCorrect": true, "points": 30},
-            {"answer": "no", "isCorrect": false, "points": 0},
-            {"answer": "vacuums", "isCorrect": false, "points": 0},
-            {"answer": "cameras", "isCorrect": false, "points": 0}
+            {"answer": "no", "isCorrect": false, "points": 0}
         ]
     },
     {
@@ -81,3 +79,4 @@
         ]
     }
 ]
+
