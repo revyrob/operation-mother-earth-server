@@ -53,12 +53,12 @@
         
     },
     {
-        "question": "What is a type of e-waste?",
+        "question": "What is not a type of e-waste?",
         "answerOptions": [
-            {"answer": "book", "isCorrect": false, "points": 0},
-            {"answer": "monitor screens", "isCorrect": true, "points": 10},
-            {"answer": "vacuums", "isCorrect": true, "points": 10},
-            {"answer": "cameras", "isCorrect": true, "points": 10}
+            {"answer": "book", "isCorrect": true, "points": 30},
+            {"answer": "monitor screens", "isCorrect": false, "points": 0},
+            {"answer": "vacuums", "isCorrect": false, "points": 0},
+            {"answer": "cameras", "isCorrect": false, "points": 0}
         ]
         
     },
