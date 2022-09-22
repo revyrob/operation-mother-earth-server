@@ -52,7 +52,6 @@ router.post("/", (req, res) => {
     if (err) {
       res.send("error posting coordinates");
     } else {
-      const parsedLocationData = JSON.parse(locationData);
       let lat = req.params.lat;
       let lng = req.params.lng;
       const input = "e-waste recycling";
@@ -67,16 +66,18 @@ router.post("/", (req, res) => {
 
 //i need to get lat and long from front end
 //run getMap again and put lat and lng into api call
-// router.post("/", (req, res) => {
-//   getMap((err, centersData) => {
-//     if (err) {
-//       res.send("error getting video");
-//     } else {
-//       getMap(req.body.lat, req.body.lng);
-//     }
-//   });
-//   console.log(req.body);
-//   res.send(`You have entered these cordinates ${req.body}`);
-// });
+router.post("/", (req, res) => {
+  getMap((err, centersData) => {
+    if (err) {
+      res.send("error getting data");
+    } else {
+      const videos = JSON.parse(centersData);
+      console.log(videos);
+      // console.log(req.body.lat, req.body.lng);
+    }
+  });
+  console.log(req.body);
+  res.send(`You have entered these cordinates ${req.body}`);
+});
 
 module.exports = router;
