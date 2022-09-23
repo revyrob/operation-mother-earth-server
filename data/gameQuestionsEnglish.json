@@ -1,0 +1,82 @@
+[
+    {
+        "question": "What is e-waste?",
+        "answerOptions": [
+            {"answer": "electronic waste", "isCorrect": true, "points": 10},
+            {"answer": "email waste", "isCorrect": false, "points": 0},
+            {"answer": "element waste", "isCorrect": false, "points": 0},
+            {"answer": "energy waste", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "On average how much does it cost to recycle your phone?",
+        "answerOptions": [
+            {"answer": "100 Euros", "isCorrect": false, "points": 0},
+            {"answer": "10 Euros", "isCorrect": false, "points": 0},
+            {"answer": "free", "isCorrect": true, "points": 10},
+            {"answer": "50 Euros", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "How long do people keep their phones in Canada?",
+        "answerOptions": [
+            {"answer": "1 year", "isCorrect": false, "points": 0},
+            {"answer": "2 years", "isCorrect": true, "points": 10},
+            {"answer": "3 years", "isCorrect": false, "points": 0},
+            {"answer": "5 years", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "How much e-waste was produced around the world in 2019?",
+        "answerOptions": [
+            {"answer": "53.6 million tonnes", "isCorrect": true, "points": 10},
+            {"answer": "20.5 million tonnes", "isCorrect": false, "points": 0},
+            {"answer": "10 million tonnes", "isCorrect": false, "points": 0},
+            {"answer": "75.6 million tonnes", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "Can e-waste leaking into the groundwater harm humans and animals?",
+        "answerOptions": [
+            {"answer": "yes", "isCorrect": true, "points": 10},
+            {"answer": "no", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "Why recycle your phone?",
+        "answerOptions": [
+            {"answer": "it is fun", "isCorrect": false, "points": 0},
+            {"answer": "it costs a lot of money", "isCorrect": false, "points": 0},
+            {"answer": "to help the environment", "isCorrect": true, "points": 10},
+            {"answer": "so you can get a new one", "isCorrect": false, "points": 0}
+        ]
+        
+    },
+    {
+        "question": "What is not a type of e-waste?",
+        "answerOptions": [
+            {"answer": "book", "isCorrect": true, "points": 30},
+            {"answer": "monitor screens", "isCorrect": false, "points": 0},
+            {"answer": "vacuums", "isCorrect": false, "points": 0},
+            {"answer": "cameras", "isCorrect": false, "points": 0}
+        ]
+        
+    },
+    {
+        "question": "Are there valuables in e-waste?",
+        "answerOptions": [
+            {"answer": "yes", "isCorrect": true, "points": 30},
+            {"answer": "no", "isCorrect": false, "points": 0}
+        ]
+    },
+    {
+        "question": "What percentage of countries have e-waste policies, legislation or regulation?",
+        "answerOptions": [
+            {"answer": "14%", "isCorrect": false, "points": 0},
+            {"answer": "35%", "isCorrect": false, "points": 0},
+            {"answer": "91%", "isCorrect": false, "points": 0},
+            {"answer": "71%", "isCorrect": true, "points": 30}
+        ]
+    }
+]
+
