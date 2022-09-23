@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
+const fs = require("fs");
+const { v4: uuidv4 } = require("uuid");
 
 //create a useEffect and get the map to load after the DOM
 //no search handler
@@ -8,15 +10,16 @@ const axios = require("axios");
 const GOOGLE_API = process.env.REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
 
 // / function to get the data from the API
-let getMap = async () => {
+let getMap = async (lat, lng) => {
   //function on load
   const input = "e-waste recycling";
   //Brainstation
   // let lat = "49.28507657283974";
   // let lng = "-123.11461581337777";
   //Rossland
-  let lat = "49.0781";
-  let lng = "-117.8";
+  // let lat = "49.0781";
+  // let lng = "-117.8";
+
   let response = await axios(
     `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${lat},${lng}`
   );
@@ -24,60 +27,92 @@ let getMap = async () => {
 };
 
 router.get("/", (req, res) => {
-  let mapData = getMap();
+  let mapData = getMap(req.params.lat, req.params.lng);
   mapData
     .then((response) => {
-      console.log(response.data.results);
+      // console.log(response.data.results);
       const centers = response.data.results;
       res.json(centers);
     })
     .catch((err) => console.log(err));
 });
 
-// router.get("/", (req, res) => {
-//   getMap((err, centerData) => {
+/*
+ *read from a json file
+ */
+function loadCentersData(callback) {
+  fs.readFile("./data/centersData.json", "utf8", callback);
+}
+
+/*
+ *write the videos.json file
+ */
+function saveCentersData(data) {
+  fs.writeFile("./data/centersData.json", data, (err) => {
+    if (err) {
+      console.error(err);
+    }
+    //file written successfully, if no error
+  });
+}
+// router.post("/", (req, res) => {
+//   getMap((err, locationData) => {
 //     if (err) {
-//       res.send("error getting center data");
+//       res.send("error posting coordinates");
 //     } else {
-//       console.log(response.data.results);
-//       const centers = JSON.parse(centerData);
-//       // const centers = response.data.results;
-//       res.json(centers);
+//       let lat = req.params.lat;
+//       let lng = req.params.lng;
+//       const input = "e-waste recycling";
+//       axios.get(
+//         `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${lat},${lng}`
+//       );
+
+//       return newResponse;
 //     }
 //   });
 // });
 
-router.post("/", (req, res) => {
-  getMap((err, locationData) => {
-    if (err) {
-      res.send("error posting coordinates");
-    } else {
-      let lat = req.params.lat;
-      let lng = req.params.lng;
-      const input = "e-waste recycling";
-      axios.get(
-        `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${lat},${lng}`
-      );
-
-      return newResponse;
-    }
-  });
-});
-
 //i need to get lat and long from front end
 //run getMap again and put lat and lng into api call
 router.post("/", (req, res) => {
-  getMap((err, centersData) => {
+  loadCentersData((err, enteredData) => {
     if (err) {
       res.send("error getting data");
     } else {
-      const videos = JSON.parse(centersData);
-      console.log(videos);
-      // console.log(req.body.lat, req.body.lng);
+      const centersDataParsed = JSON.parse(enteredData);
+      // console.log(req.body);
+
+      //axois call to google geocoding
+      axios
+        .get(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address}+${req.body.city}+${req.body.country}&key=${GOOGLE_API}`
+        )
+        .then((response) => {
+          lat = response.data.results[0].geometry.location.lat;
+          lng = response.data.results[0].geometry.location.lng;
+          //create a new center and push to array
+          const createCenter = {
+            name: req.body.name,
+            address: req.body.address,
+            city: req.body.city,
+            country: req.body.city,
+            lng: lng,
+            lat: lat,
+          };
+          //push the new center to the json
+          centersDataParsed.push(createCenter);
+
+          //save the stringified data to the json file
+          saveCentersData(JSON.stringify(centersDataParsed));
+
+          res.status(201).send("You have submitted info");
+        })
+        .catch((err) => console.log(err));
+
+      //take information out for lat and long
+      //write to create center
     }
   });
-  console.log(req.body);
-  res.send(`You have entered these cordinates ${req.body}`);
 });
 
 module.exports = router;
