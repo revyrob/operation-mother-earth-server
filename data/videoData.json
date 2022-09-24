@@ -1,0 +1,123 @@
+
+[
+    {
+        "title": "What is E-waste?",
+        "source": "OPB",
+        "image": "http://localhost:8080/images/what-is-e-waste.png",
+        "description": "Every year the world produces 1.4 billion new phones, the old ones enter a global stream of old TVs, computers, tablets, and phones. It's the fastest growing source of waste on the planet.",
+        "likes": "0",
+        "duration": "1:22",
+        "video": "https://www.youtube.com/embed/HQZjouMTH08",
+        "comments": [
+        ],
+        "id": "b376b886-3b80-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "Google Account Backup & Restore for Android",
+        "source": "Tech with Bret",
+        "image": "http://localhost:8080/images/android-clear.png",
+        "description": " Backing up information to your Google Account with Google Drive is free and keeps all your files safe as long as you have it set up correctly. In this video I walk you through everything you need to know to make sure your info is being properly saved and ready to move to a new phone at any time.  I also show how to use Autofill to quickly login to all your apps.",
+        "likes": "0",
+        "duration": "19:47",
+        "video": "https://www.youtube.com/embed/NforgNfwsnw",
+        "comments": [
+        ],
+        "id": "c227be02-3b80-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "How to back up your iPhone to iCloud",
+        "source": "Apple Support",
+        "image": "http://localhost:8080/images/backup-iphone.png",
+        "description": "Keep your important information on your iPhone, iPad, or iPod touch backed up with iCloud. That way if anything ever happens to your device, you can pick up right where you left off. Here’s how to use iCloud Backup.",
+        "likes": "0",
+        "duration": "0:39",
+        "video": "https://www.youtube.com/embed/BoOn970anBQ",
+        "comments": [
+        ],
+        "id": "d82db186-3b92-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "E-waste Animation",
+        "source": "Kshiraj Telang",
+        "image": "http://localhost:8080/images/ewaste-overload.png",
+        "description": "This is a short film we did for Toxics Link, portraying the threat to the world due to the e-waste that gets generated.",
+        "likes": "0",
+        "duration": "1:43",
+        "video": "https://www.youtube.com/embed/g80oYUroAcU",
+        "comments": [
+        ],
+        "id": "5288846a-3b93-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "How 6 Million Pounds Of Electronic Waste Gets Recycled A Month",
+        "source": "Business Insider",
+        "image": "http://localhost:8080/images/lots-ewaste.png",
+        "description": "Only 17% of electronic waste is recycled. That’s because devices aren’t designed to be recycled. They’re full of tiny, toxic materials that are hard and expensive to break down. But if extracted safely, those materials could mean big money for e-recyclers like Sims Lifecycle Services. We visit Sims’ Tennessee recycling facility to find out why e-waste is getting harder to deal with.",
+        "likes": "0",
+        "duration": "9:43",
+        "video": "https://www.youtube.com/embed/S2lmPIa1iWE",
+        "comments": [
+        ],
+        "id": "c1cf9340-3b93-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "How Can We Fix The Massive E-Waste Problem?",
+        "source": "CNBC",
+        "image": "http://localhost:8080/images/how-much-waste.png",
+        "description": "About 6.9 million metric tons of e-waste was produced in the U.S. alone in 2019. That's about the same weight as 19 Empire State Buildings. Of that, only about 15% was collected for recycling. Until products like phones and tablets are made to last much longer, Apple, Google, Samsung and others could do more to fix this problem of e-waste, and consumers need to be more responsible when buying and discarding their devices.",
+        "likes": "0",
+        "duration": "17:05",
+        "video": "https://www.youtube.com/embed/IqxwnmlUUts",
+        "comments": [
+        ],
+        "id": "3ee1789e-3b94-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "Explaining the Circular Economy and How Society Can Re-think Progress",
+        "source": "Ellen MacArthur Foundation",
+        "image": "http://localhost:8080/images/rethink-economy.png",
+        "description": "There's a world of opportunity to re-think and re-design the way we make stuff. Re-Thinking Progress' explores how through a change in perspective we can re-design the way our economy works - designing products that can be 'made to be made again' and powering the system with renewable energy. It questions whether with creativity and innovation we can build a restorative economy.",
+        "likes": "0",
+        "duration": "3:48",
+        "video": "https://www.youtube.com/embed/zCRKvDyyHmI",
+        "comments": [
+        ],
+        "id": "9c99ae0a-3b9b-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "Circular Economy Explained",
+        "source": "Ellen MacArthur Foundation",
+        "image": "http://localhost:8080/images/circular-economy.png",
+        "description": "With the price of resources and energy becoming increasingly volatile, can today's linear economy work in the long term?",
+        "likes": "0",
+        "duration": "3:11",
+        "video": "https://www.youtube.com/embed/Cd_isKtGaf8",
+        "comments": [
+        ],
+        "id": "5462f15e-3b9c-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "How to Properly Reset iPhone to factory default",
+        "source": "zollotech",
+        "image": "http://localhost:8080/images/iphone-reset.png",
+        "description": "I show you how to properly reset and restore any iPhone or iPad so you can sell it, give it away, return it and make sure they you have removed all data.  In this video I walk you through backing up iPhone, removing your iCloud account, turning off Find my iPhone and resetting and erasing your iPhone.  I show you using the iPhone 11 Pro Max and new iPhone SE.",
+        "likes": "0",
+        "duration": "5:51",
+        "video": "https://www.youtube.com/embed/jpwke8YzsBE",
+        "comments": [
+        ],
+        "id": "c1cc8b1a-3b9c-11ed-a261-0242ac120002"
+    },
+    {
+        "title": "How to Reset Android to Factory Default",
+        "source": "zollotech",
+        "image": "http://localhost:8080/images/android-reset.png",
+        "description": "I show you how to reset your Android phone to factory default or back to stock just like the day you bought it.  In this video I use a Nexus 5 running the latest version of Android, 4.4 KitKat.  Most Android phones are similar in the way you reset them.",
+        "likes": "0",
+        "duration": "3:51",
+        "video": "https://www.youtube.com/embed/_xbA-E6rOBc",
+        "comments": [
+        ],
+        "id": "29782bc0-3b9d-11ed-a261-0242ac120002"
+    }
+]
