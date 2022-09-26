@@ -1,8 +1,9 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 8080;
 const cors = require("cors");
+const mongoose = require("mongoose");
 const recyclingCenterRoute = require("./routes/api.recycling");
 const gameQuestionsRoute = require("./routes/api.gameQuestions");
 const gameStoryRoute = require("./routes/api.gameStory");
@@ -19,6 +20,19 @@ app.use("/gameQuestions", gameQuestionsRoute);
 app.use("/gameStory", gameStoryRoute);
 app.use("/education", educationRoute);
 /// app.use("/buySell", buySellRoute);
+
+//DB connection
+mongoose
+  .connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log(`DB connected`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 app.listen(PORT, function () {
   console.log("Server is up🚀");
