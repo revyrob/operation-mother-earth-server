@@ -3,7 +3,6 @@ const router = express.Router();
 const fs = require("fs");
 
 const videos = "./data/videoData.json";
-const questions = "./data/ewastequestions.json";
 
 /*
  *read video.json file
@@ -15,33 +14,14 @@ function readVideoData(callback) {
 /*
  *write the videos.json file
  */
-function writeVideoData(data) {
-  fs.writeFile("./data/videoData.json", data, (err) => {
-    if (err) {
-      console.error(err);
-    }
-    //file written successfully, if no error
-  });
-}
-
-/*
- *read questions.json file
- */
-function readQuestionData(callback) {
-  fs.readFile("./data/ewastequestions.json", "utf8", callback);
-}
-
-/*
- *write the videos.json file
- */
-function writeQuestionData(data) {
-  fs.writeFile("./data/ewastequestions.json", data, (err) => {
-    if (err) {
-      console.error(err);
-    }
-    //file written successfully, if no error
-  });
-}
+// function writeVideoData(data) {
+//   fs.writeFile("./data/videoData.json", data, (err) => {
+//     if (err) {
+//       console.error(err);
+//     }
+//     //file written successfully, if no error
+//   });
+// }
 
 /*
  *Get all the videos
@@ -65,6 +45,25 @@ router.get("/", (req, res) => {
 });
 
 /*
+ *read questions.json file
+ */
+const questions = "./data/ewastequestions.json";
+/*
+ *Get all the questions
+ */
+router.get("/questions", (req, res) => {
+  console.log("this worked");
+  fs.readFile(questions, "utf-8", (err, data) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(data);
+      res.status(200).send(data);
+    }
+  });
+});
+
+/*
  *Get single video by using id pararm
  */
 router.get("/:id", (req, res) => {
@@ -80,32 +79,31 @@ router.get("/:id", (req, res) => {
 });
 
 /*
- *Get all the videos
- */
-router.get("/questions", (req, res) => {
-  console.log("this worked");
-  fs.readQuestionData(questions, "utf-8")
-    .then((data) => {
-      res.status(200).send(data);
-    })
-    .catch((err) => {
-      res.status(400).send("error reading file");
-    });
-});
-
-/*
- *Get single video by using id pararm
+ *Get single questions by using id pararm
  */
 router.get("/questions/:id", (req, res) => {
-  readQuestionData((err, videoData) => {
+  fs.readFile(questions, "utf-8", (err, data) => {
     if (err) {
-      res.send("error getting video data");
+      res.send("error getting question data");
     } else {
-      const videos = JSON.parse(videoData);
-      const foundVideo = videos.find((video) => video.id == req.params.id);
-      res.json(foundVideo);
+      console.log(data);
+      // const question = JSON.parse(questions);
+      // const foundQuestion = question.find((q) => q.id == req.params.id);
+      // res.json(foundQuestion);
     }
   });
 });
+
+/*
+ *write the questions to file
+ */
+function writeQuestionData(data) {
+  fs.writeFile("./data/ewastequestions.json", data, (err) => {
+    if (err) {
+      console.error(err);
+    }
+    //file written successfully, if no error
+  });
+}
 
 module.exports = router;

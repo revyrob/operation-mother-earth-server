@@ -51,7 +51,7 @@ router.get("/", (req, res) => {
   let mapData = getMap(req.params.lat, req.params.lng);
   mapData
     .then((response) => {
-      // console.log(response.data.results);
+      console.log(response.data.results);
       const centers = response.data.results;
       res.json(centers);
     })
