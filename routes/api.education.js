@@ -139,9 +139,8 @@ router.post("/questions/new", (req, res) => {
  */
 router.get("/questions/:id", async (req, res) => {
   try {
-    const dataQA = await QA.findById(req.params._id);
-    console.log(dataQA);
-    // res.send(dataQA);
+    const dataQA = await QA.findOne({ _id: req.params.id });
+    res.send(dataQA);
   } catch (err) {
     console.log(err);
     res.status(500).send({ error: err });
@@ -164,18 +163,32 @@ router.get("/questions/:id", async (req, res) => {
 // });
 
 /*
+ *Connection to MongoDB
+ */
+router.get("/:id", async (req, res) => {
+  try {
+    const videoData = await Videos.findOne({ _id: req.params.id });
+    // console.log(videoData);
+    res.send(videoData);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send({ error: err });
+  }
+});
+
+/*
  *Get single video by using id pararm
  */
-router.get("/:id", (req, res) => {
-  readVideoData((err, videoData) => {
-    if (err) {
-      res.send("error getting video data");
-    } else {
-      const videos = JSON.parse(videoData);
-      const foundVideo = videos.find((video) => video.id == req.params.id);
-      res.json(foundVideo);
-    }
-  });
-});
+// router.get("/:id", (req, res) => {
+//   readVideoData((err, videoData) => {
+//     if (err) {
+//       res.send("error getting video data");
+//     } else {
+//       const videos = JSON.parse(videoData);
+//       const foundVideo = videos.find((video) => video.id == req.params.id);
+//       res.json(foundVideo);
+//     }
+//   });
+// });
 
 module.exports = router;
