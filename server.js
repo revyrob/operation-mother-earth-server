@@ -8,6 +8,8 @@ const recyclingCenterRoute = require("./routes/api.recycling");
 const gameQuestionsRoute = require("./routes/api.gameQuestions");
 const gameStoryRoute = require("./routes/api.gameStory");
 const educationRoute = require("./routes/api.education");
+// const questionsEduRoute = require("./routes/api.questionsEdu");
+
 // const buySellRoute = require("./route/api.buySell");
 
 //to use the static files in my public folder
@@ -19,6 +21,8 @@ app.use("/recycling", recyclingCenterRoute);
 app.use("/gameQuestions", gameQuestionsRoute);
 app.use("/gameStory", gameStoryRoute);
 app.use("/education", educationRoute);
+// app.use("/questions", educationRoute);
+
 /// app.use("/buySell", buySellRoute);
 
 //DB connection

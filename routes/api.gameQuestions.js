@@ -6,7 +6,6 @@ const Questions = require("../models/Schemas.js");
 // const questions = "./data/gameQuestionsEnglish.json";
 // const questions = "./data/gameQuestionsLevel.json";
 
-// const question = require("./questions");
 /*
  *Get all the questions
  */
@@ -27,7 +26,7 @@ const Questions = require("../models/Schemas.js");
 router.get("/", async (req, res) => {
   try {
     const question = await Questions.find({});
-    console.log(question);
+    // console.log(question);
     res.send(question);
   } catch (err) {
     console.log(err);
