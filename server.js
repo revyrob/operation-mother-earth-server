@@ -21,9 +21,6 @@ app.use("/recycling", recyclingCenterRoute);
 app.use("/gameQuestions", gameQuestionsRoute);
 app.use("/gameStory", gameStoryRoute);
 app.use("/education", educationRoute);
-// app.use("/questions", educationRoute);
-
-/// app.use("/buySell", buySellRoute);
 
 //DB connection
 mongoose

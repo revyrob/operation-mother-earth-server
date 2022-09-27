@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const fs = require("fs/promises");
+const fs = require("fs");
 const Story = require("../models/SchemaStory.js");
 
-const story = "./data/gameStoryboardEnglish.json";
+// const story = "./data/gameStoryboardEnglish.json";
 
 /*
  *Get all the questions
@@ -23,9 +23,8 @@ const story = "./data/gameStoryboardEnglish.json";
  */
 router.get("/", async (req, res) => {
   try {
-    const story = await Story.find({});
-    console.log(story);
-    res.send(story);
+    const storyboards = await Story.find();
+    res.send(storyboards);
   } catch (err) {
     console.log(err);
     res.status(500).send({ error: err });

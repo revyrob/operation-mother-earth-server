@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 const fs = require("fs");
+// const Center = require("../models/SchemaCenter.js");
 
 //create a useEffect and get the map to load after the DOM
 //no search handler
@@ -57,6 +58,21 @@ router.get("/", (req, res) => {
     })
     .catch((err) => console.log(err));
 });
+
+/*
+ *Connection to MongoDB
+ */
+// router.get("/", async (req, res) => {
+//   try {
+//     let mapData = getMap(req.params.lat, req.params.lng);
+//     const center = await Center.find({});
+//     // console.log(question);
+//     res.send(center);
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).send({ error: err });
+//   }
+// });
 
 /*
  *get data from written file
