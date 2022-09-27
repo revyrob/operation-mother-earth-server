@@ -12,6 +12,24 @@ function readVideoData(callback) {
 }
 
 /*
+ *read ewaste questions file
+ */
+function readQuestionData(callback) {
+  fs.readFile("./data/ewastequestions.json", "utf8", callback);
+}
+
+/*
+ *write the questions to file
+ */
+function writeQuestionData(data) {
+  fs.writeFile("./data/ewastequestions.json", data, (err) => {
+    if (err) {
+      console.error(err);
+    }
+    //file written successfully, if no error
+  });
+}
+/*
  *write the videos.json file
  */
 // function writeVideoData(data) {
@@ -47,18 +65,32 @@ router.get("/", (req, res) => {
 /*
  *read questions.json file
  */
-const questions = "./data/ewastequestions.json";
+// const questions = "./data/ewastequestions.json";
 /*
  *Get all the questions
  */
 router.get("/questions", (req, res) => {
-  console.log("this worked");
-  fs.readFile(questions, "utf-8", (err, data) => {
+  readQuestionData((err, questions) => {
     if (err) {
-      console.log(err);
+      res.send("error while getting question data");
     } else {
-      console.log(data);
-      res.status(200).send(data);
+      const question = JSON.parse(questions);
+      res.status(200).send(questions);
+    }
+  });
+});
+
+/*
+ *Get single questions by using id pararm
+ */
+router.get("/questions/:id", (req, res) => {
+  readQuestionData((err, data) => {
+    if (err) {
+      res.send("error while getting question data");
+    } else {
+      const questions = JSON.parse(data);
+      const foundVideo = questions.find((q) => q.id == req.params.id);
+      res.json(foundVideo);
     }
   });
 });
@@ -77,33 +109,5 @@ router.get("/:id", (req, res) => {
     }
   });
 });
-
-/*
- *Get single questions by using id pararm
- */
-router.get("/questions/:id", (req, res) => {
-  fs.readFile(questions, "utf-8", (err, data) => {
-    if (err) {
-      res.send("error getting question data");
-    } else {
-      console.log(data);
-      // const question = JSON.parse(questions);
-      // const foundQuestion = question.find((q) => q.id == req.params.id);
-      // res.json(foundQuestion);
-    }
-  });
-});
-
-/*
- *write the questions to file
- */
-function writeQuestionData(data) {
-  fs.writeFile("./data/ewastequestions.json", data, (err) => {
-    if (err) {
-      console.error(err);
-    }
-    //file written successfully, if no error
-  });
-}
 
 module.exports = router;
