@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const { uuid } = require("uuidv4");
 
 const videos = "./data/videoData.json";
 
@@ -63,10 +64,6 @@ router.get("/", (req, res) => {
 });
 
 /*
- *read questions.json file
- */
-// const questions = "./data/ewastequestions.json";
-/*
  *Get all the questions
  */
 router.get("/questions", (req, res) => {
@@ -76,6 +73,32 @@ router.get("/questions", (req, res) => {
     } else {
       const question = JSON.parse(questions);
       res.status(200).send(questions);
+    }
+  });
+});
+
+router.post("/questions/new", (req, res) => {
+  readQuestionData((err, questionData) => {
+    if (err) {
+      res.send("error while getting question data");
+    } else {
+      //get the info and parse
+      const questionparsed = JSON.parse(questionData);
+      //set up a new const
+      console.log(req.body.question);
+      const newQuestion = {
+        id: uuid(),
+        questions: req.body.question,
+        answer: "Will be answered soon...",
+      };
+      //push it
+      questionparsed.push(newQuestion);
+
+      //save the new json
+      writeQuestionData(JSON.stringify(questionparsed));
+
+      //send status
+      res.status(201).send("You have submitted info");
     }
   });
 });
