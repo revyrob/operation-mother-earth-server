@@ -8,9 +8,6 @@ const recyclingCenterRoute = require("./routes/api.recycling");
 const gameQuestionsRoute = require("./routes/api.gameQuestions");
 const gameStoryRoute = require("./routes/api.gameStory");
 const educationRoute = require("./routes/api.education");
-// const questionsEduRoute = require("./routes/api.questionsEdu");
-
-// const buySellRoute = require("./route/api.buySell");
 
 //to use the static files in my public folder
 app.use(express.static("public"));
@@ -35,6 +32,7 @@ mongoose
     console.log(err);
   });
 
+//listen on port
 app.listen(PORT, function () {
   console.log("Server is up🚀");
   console.log(PORT);
