@@ -79,7 +79,7 @@ router.get("/", (req, res) => {
 router.get("/new", async (req, res) => {
   try {
     const center = await Center.find({});
-    console.log(center);
+    // console.log(center);
     res.send(center);
   } catch (err) {
     console.log(err);
@@ -108,7 +108,7 @@ router.post("/", (req, res) => {
         lng: lng,
         lat: lat,
       };
-      console.log(createCenter);
+      // console.log(createCenter);
       new Center(createCenter).save();
     });
 });

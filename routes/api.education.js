@@ -4,7 +4,6 @@ const fs = require("fs");
 const { uuid } = require("uuidv4");
 const Videos = require("../models/SchemaVideos.js");
 const QA = require("../models/SchemaQA.js");
-const Questions = require("../models/Schemas.js");
 
 const videos = "./data/videoData.json";
 
