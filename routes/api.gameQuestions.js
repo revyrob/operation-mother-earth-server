@@ -25,8 +25,9 @@ const Questions = require("../models/Schemas.js");
  */
 router.get("/", async (req, res) => {
   try {
+    //creates a const and awaits the data from Questions schema
     const question = await Questions.find({});
-    // console.log(question);
+    //sends back the const above
     res.send(question);
   } catch (err) {
     console.log(err);
