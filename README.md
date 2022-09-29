@@ -1,5 +1,4 @@
 # Operation Mother Earth Backend
-<h2>Backend for Operation Mother Earth</h2>
 <ul>Dependicies Listed Below
 <li>axios</li>
 <li>body-parser</li>
@@ -11,7 +10,7 @@
 <li>sass</li>
 <li>uuidv4</li></ul>
 
-#to install
+# To install
 <p>Clone the github repo</p>
 <p>Once the project is open in a text editor (like VS Code)</p>
 <p>Enter the following in your terminal:</p>
