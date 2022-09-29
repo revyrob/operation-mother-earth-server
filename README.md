@@ -22,6 +22,6 @@
 
 # Environment keys
 <p>PORT = 8080</p>
-<p>REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = <API Key from Google></p>
-<p>DB_URI = <MongoDB connection line></p>
+<p>REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = API Key from Google</p>
+<p>DB_URI = MongoDB connection line</p>
 
