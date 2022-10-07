@@ -36,11 +36,11 @@ let getMap = async (lat, lng) => {
   // let lat = "49.28507657283974";
   // let lng = "-123.11461581337777";
   //Rossland
-  let latt = "49.0781";
-  let long = "-117.8";
+  // let latt = "49.0781";
+  // let long = "-117.8";
 
   let response = await axios(
-    `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${latt},${long}&radius=1000`
+    `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${lat},${lng}&radius=1000`
   );
   return response;
 };
@@ -51,11 +51,11 @@ let getMap = async (lat, lng) => {
  */
 router.get("/", (req, res) => {
   let mapData = getMap(req.params.lat, req.params.lng);
-  console.log(mapData);
+  // console.log(mapData);
   mapData
     .then((response) => {
       const centers = response.data.results;
-      console.log(response.data.results.geometry);
+      // console.log(response.data.results.geometry);
       res.json(centers);
     })
     .catch((err) => console.log(err));
