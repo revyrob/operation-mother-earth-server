@@ -33,14 +33,15 @@ let getMap = async (lat, lng) => {
   //function on load
   const input = "e-waste recycling";
   //Brainstation
-  // let lat = "49.28507657283974";
-  // let lng = "-123.11461581337777";
+  // let latt = "49.28507657283974";
+  // let long = "-123.11461581337777";
   //Rossland
   // let latt = "49.0781";
   // let long = "-117.8";
 
   let response = await axios(
-    `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}%20in%20&key=${GOOGLE_API}&location=${lat},${lng}&radius=1000`
+    // `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}&location=${lat}%2C${lng}&key=${GOOGLE_API}`
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=25000&keyword=${input}&key=${GOOGLE_API}`
   );
   return response;
 };
@@ -50,12 +51,11 @@ let getMap = async (lat, lng) => {
  *dynamic
  */
 router.get("/", (req, res) => {
-  let mapData = getMap(req.params.lat, req.params.lng);
-  // console.log(mapData);
+  let mapData = getMap(req.query.lat, req.query.lng);
   mapData
     .then((response) => {
       const centers = response.data.results;
-      // console.log(response.data.results.geometry);
+
       res.json(centers);
     })
     .catch((err) => console.log(err));
