@@ -40,7 +40,7 @@ let getMap = async (lat, lng) => {
   // let long = "-117.8";
 
   let response = await axios(
-    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=25000&keyword=${input}&key=${GOOGLE_API}`
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=20000&keyword=${input}&key=${GOOGLE_API}`
   );
   return response;
 };
@@ -80,7 +80,6 @@ router.get("/", (req, res) => {
 router.get("/new", async (req, res) => {
   try {
     const center = await Center.find({});
-    // console.log(center);
     res.send(center);
   } catch (err) {
     console.log(err);
@@ -109,7 +108,6 @@ router.post("/", (req, res) => {
         lng: lng,
         lat: lat,
       };
-      // console.log(createCenter);
       new Center(createCenter).save();
     });
 });
