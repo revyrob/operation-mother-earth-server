@@ -129,7 +129,7 @@ router.post("/questions/new", (req, res) => {
     questions: req.body.question,
     answer: "Will be answered soon...",
   };
-  console.log(newQuestion);
+  // console.log(newQuestion);
   new QA(newQuestion).save();
 });
 
