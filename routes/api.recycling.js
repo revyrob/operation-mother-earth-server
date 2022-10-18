@@ -40,8 +40,7 @@ let getMap = async (lat, lng) => {
   // let long = "-117.8";
 
   let response = await axios(
-    // `https://maps.googleapis.com/maps/api/place/textsearch/json?query=${input}&location=${lat}%2C${lng}&key=${GOOGLE_API}`
-    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=20000&keyword=${input}&key=${GOOGLE_API}`
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=25000&keyword=${input}&key=${GOOGLE_API}`
   );
   return response;
 };
