@@ -1,5 +1,6 @@
 # Getting Started Operation Mother Earth Backend
-
+<p>Operation Mother Earth is a multi-page application for school-age children to learn about electronic waste.  The web application is intended to be played on a mobile or tablet device.  The application consists of a storyboard game, google search for e-waste centers around the client, add a e-waste center to the backend, ask questions and post to the backend, and videos about e-waste.</p>
+<br/>
 <ul>
 <h3>Dependencies:</h3>
 <li>Axios</li>
@@ -25,7 +26,8 @@ When you open the directory run:
 <p>You can also run the <a href="https://github.com/revyrob/operation-mother-earth-jsonServer">Json Backend</a> if you don't have a MongoDB database.</p>
 
 
-# Environment keys
+## Environment keys
+<p>Create a .env file and add the follow keys.  Create a google api key with Google Cloud.  Create a MongoDB account and add your DB_URI key.</p>
 <p>PORT = 8080</p>
 <p>REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = API Key from Google</p>
 <p>DB_URI = MongoDB connection line</p>
