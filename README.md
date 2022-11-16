@@ -1,6 +1,4 @@
-# Operation Mother Earth Backend
-
-# Getting Started Operation Mother Earth Frontend
+# Getting Started Operation Mother Earth Backend
 
 <ul>
 <h3>Dependencies:</h3>
