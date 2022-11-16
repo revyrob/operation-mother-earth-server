@@ -4,6 +4,7 @@
 <ul>
 <h3>Dependencies:</h3>
 <li>Axios</li>
+<li>MongoDB</li>
 <li>EJS</li>
 <li>Express</li>
 <li>Node.js</li>
