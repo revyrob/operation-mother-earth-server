@@ -4,13 +4,12 @@
 
 <ul>
 <h3>Dependencies:</h3>
-<li>axios</li>
-<li>body-parser</li>
-<li>ejs</li>
-<li>express</li>
+<li>Axios</li>
+<li>EJS</li>
+<li>Express</li>
 <li>Node.js</li>
-<li>mongoose</li>
-<li>google-api</li>
+<li>Mongoose</li>
+<li>Google-API</li>
 <li>RESTful APIs</li>
 <li>uuidv4</li></ul>
 
