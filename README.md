@@ -23,7 +23,7 @@ When you open the directory run:
 
 ## Run with MongoDB
  <p>Within the Data folder there are 5 folders with json data for the projects.  Import these files into your MongoDB database and enter your DB_URI key into the environment file.</p>
-<p>You can also run the <a href="https://github.com/revyrob/operation-mother-earth-jsonServer">Json Backend</a> if you don't have a MongoDB database.</p>
+<p>You can also run the <a href="https://github.com/revyrob/operation-mother-earth-jsonServer">operation-mother-earth-jsonServer</a> if you don't have a MongoDB database.</p>
 
 
 ## Environment keys
