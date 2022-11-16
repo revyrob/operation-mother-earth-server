@@ -87,7 +87,6 @@ router.get("/", async (req, res) => {
 router.get("/questions", async (req, res) => {
   try {
     const dataQA = await QA.find();
-    // console.log(dataQA);
     res.send(dataQA);
   } catch (err) {
     console.log(err);
@@ -129,7 +128,6 @@ router.post("/questions/new", (req, res) => {
     questions: req.body.question,
     answer: "Will be answered soon...",
   };
-  // console.log(newQuestion);
   new QA(newQuestion).save();
 });
 
@@ -167,7 +165,6 @@ router.get("/questions/:id", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const videoData = await Videos.findOne({ _id: req.params.id });
-    // console.log(videoData);
     res.send(videoData);
   } catch (err) {
     console.log(err);

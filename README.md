@@ -1,55 +1,56 @@
 # Operation Mother Earth Backend
-<ul>Dependicies Listed Below
+
+# Getting Started Operation Mother Earth Frontend
+
+<ul>
+<h3>Dependencies:</h3>
 <li>axios</li>
 <li>body-parser</li>
-<li>cors</li>
-<li>dotenv</li>
 <li>ejs</li>
 <li>express</li>
+<li>Node.js</li>
 <li>mongoose</li>
-<li>sass</li>
+<li>google-api</li>
+<li>RESTful APIs</li>
 <li>uuidv4</li></ul>
 
-# To install
-<p>Clone the github repo</p>
-<p>Once the project is open in a text editor (like VS Code)</p>
-<p>Enter the following in your terminal:</p>
-# npm install
 
-<p>You will find 4 json files that you can import into a MongoDB</p>
-<p>Or you can run a local backend by uncommenting the axios get and post functions</p>
-<p>If you uncomment out the axios and are not running on a MongoDB database you will need to comment out or errase the MongoDB calls in the api files</p>
+## Install/Run
+When you open the directory run:
+<p>npm install</p>
+<p>In the project directory, run:</p>
+<p>npm start</p>
+<p>The frontend for this project is located on repo <a href="https://github.com/revyrob/operation-mother-earth-client">operation-mother-earth-client</a><p>
+<p>You will need to open and run the frontend for the backend to work.</p>
 
-# Available Scripts
-In the project directory, you can run:
-# `npm start`
+## Run with MongoDB
+ <p>Within the Data folder there are 5 folders with json data for the projects.  Import these files into your MongoDB database and enter your DB_URI key into the environment file.</p>
+<p>You can also run the <a href="https://github.com/revyrob/operation-mother-earth-jsonServer">Json Backend</a> if you don't have a MongoDB database.</p>
+
 
 # Environment keys
 <p>PORT = 8080</p>
 <p>REACT_APP_NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = API Key from Google</p>
 <p>DB_URI = MongoDB connection line</p>
 
-<h2>Future Plans for Operation Mother Earth</h2>
+## Future Plans for Operation Mother Earth
 <ul>
-<li>I am currently searching for funding to continue and grow
+<li>Searching for funding to continue and grow
 this application.</li>
-<li>I would like to add different game levels for different ages.
+<li>Add different game levels for different ages.
 </li>
-<li>To continue to research and add questions and resources about e-waste.
+<li>Continue to research and add questions and resources about e-waste.
 </li>
-<li>I would like the applciation to be in french and english.
+<li>The application to be in french and english.
 </li>
-<li>I would like to work with a UX/UI designer
+<li>Sork with a UX/UI designer
 to improve the layout and user experience of the applciation.</li>
-<li>I still have a couple of minor bugs with the geoloation and how
+<li>Minor bugs with the geoloation and how
 it reacts to different browsers.</li>
-<li>I would like
-to buy the url name and host it on a faster backend plan.</li>
-<li>I would like to introduce the application into the school system.
+<li>Buy the url name and host it on a faster backend plan.</li>
+<li>Introduce the application into the school system.
 </li>
 </ul>
 
-## Deployed Site
-<a href='https://operation-mother-earth.netlify.app/'>Operation Mother Earth</a>
 
 
