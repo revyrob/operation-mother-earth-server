@@ -32,15 +32,9 @@ function saveCentersData(data) {
 let getMap = async (lat, lng) => {
   //function on load
   const input = "e-waste recycling";
-  //Brainstation
-  // let latt = "49.28507657283974";
-  // let long = "-123.11461581337777";
-  //Rossland
-  // let latt = "49.0781";
-  // let long = "-117.8";
 
   let response = await axios(
-    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=20000&keyword=${input}&key=${GOOGLE_API}`
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=30000&keyword=${input}&key=${GOOGLE_API}`
   );
   return response;
 };
@@ -54,7 +48,6 @@ router.get("/", (req, res) => {
   mapData
     .then((response) => {
       const centers = response.data.results;
-
       res.json(centers);
     })
     .catch((err) => console.log(err));
