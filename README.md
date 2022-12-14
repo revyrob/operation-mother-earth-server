@@ -1,6 +1,9 @@
 # 🌎 Operation Mother Earth -  Backend 
 Operation Mother Earth is a multi-page application for school-age children to learn about electronic waste.  The web application in mobile responsiveness is intended to be played on a mobile or tablet device.  The application consists of a storyboard game, google search for e-waste centers around the client, user to add ew-waste centers to the server, ask questions and post questions, and view a collection of videos about e-waste. 
 
+## 🚀 Demo
+https://operation-mother-earth.netlify.app/
+
 ## 💻 Built with
 <li>Axios</li>
 <li>MongoDB</li>
@@ -18,9 +21,6 @@ When you open the directory run:
 <p>npm start</p>
 <p>The frontend for this project is located on repo <a href="https://github.com/revyrob/operation-mother-earth-client">operation-mother-earth-client</a><p>
 <p>You will need to open and run the frontend for the backend to work.</p>
-
-## 🚀 Demo
-https://operation-mother-earth.netlify.app/
 
 ## 🛠️ Installation Steps:
 1. To start using this app you first need to clone the repository:
