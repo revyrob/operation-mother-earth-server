@@ -54,20 +54,6 @@ router.get("/", (req, res) => {
 });
 
 /*
- *get data from written file
- */
-// router.get("/new", (req, res) => {
-//   loadCentersData((err, data) => {
-//     if (err) {
-//       res.send("error getting data from json file");
-//     } else {
-//       const centers = JSON.parse(data);
-//       res.json(centers);
-//     }
-//   });
-// });
-
-/*
  *Connection to list of centers that users have entered in.  MongoDB
  */
 router.get("/new", async (req, res) => {
@@ -104,48 +90,5 @@ router.post("/", (req, res) => {
       new Center(createCenter).save();
     });
 });
-
-//i need to get lat and long from front end
-//run getMap again and put lat and lng into api call
-// router.post("/", (req, res) => {
-//   loadCentersData((err, enteredData) => {
-//     if (err) {
-//       res.send("error getting data");
-//     } else {
-//       const centersDataParsed = JSON.parse(enteredData);
-//       // console.log(req.body);
-
-//       //axois call to google geocoding
-//       axios
-//         .get(
-//           `https://maps.googleapis.com/maps/api/geocode/json?address=${req.body.address}+${req.body.city}+${req.body.country}&key=${GOOGLE_API}`
-//         )
-//         .then((response) => {
-//           lat = response.data.results[0].geometry.location.lat;
-//           lng = response.data.results[0].geometry.location.lng;
-//           //create a new center and push to array
-//           const createCenter = {
-//             name: req.body.business,
-//             address: req.body.address,
-//             city: req.body.city,
-//             country: req.body.country,
-//             lng: lng,
-//             lat: lat,
-//           };
-//           //push the new center to the json
-//           centersDataParsed.push(createCenter);
-
-//           //save the stringified data to the json file
-//           saveCentersData(JSON.stringify(centersDataParsed));
-
-//           res.status(201).send("You have submitted info");
-//         })
-//         .catch((err) => console.log(err));
-
-//       //take information out for lat and long
-//       //write to create center
-//     }
-//   });
-// });
 
 module.exports = router;
